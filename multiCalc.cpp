@@ -54,6 +54,7 @@ int main()
     double r, s;
     char sign;
     
+    //While loop to ask for input as logn as the sign is not recognized
     while (sign != '*' || sign != '+' || sign != '-' || sign != '/')
     {
        
@@ -67,8 +68,8 @@ int main()
         cout << "Now insert the second number: ";
         cin >> s;
         
-        
-        if(sign == '*')
+    //Conditional if statement to choose the appropriate calculation depending on sign chosen    
+    if(sign == '*')
     {
       cout << "The answer for multiplication is : " << multiplication(r, s) << "\n"<< endl;  
     }
