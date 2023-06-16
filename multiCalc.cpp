@@ -1,12 +1,13 @@
 #include <iostream>
 using namespace std;
 
+//Template with a contructor that takes in wto parametors
 template <class T>
 class Calculate
 {
     private:
     T first, second;
-    
+    //Different claculation operations to perform
     public:
     Calculate(T a, T b)
     :first (a), second (b){ }
@@ -17,6 +18,7 @@ class Calculate
     T modulus();
 };
 
+//Calculation fuctions for different operations
 template <class T>
 T addition(T a, T b)
 {
@@ -61,6 +63,7 @@ int main()
     cout << "Now insert the second number: ";
     cin >> s;
     
+    //Calculation operation signs to perform appropriate calculation from any of the four
     if(sign == '*')
     {
       cout << "The answer for multiplication is : " << multiplication(r, s)<< endl;  
