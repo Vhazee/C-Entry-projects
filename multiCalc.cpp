@@ -54,37 +54,38 @@ int main()
     double r, s;
     char sign;
     
-    cout << "Please insert the first number : ";
-    cin >> r;
-    
-    cout << "Choose the sign for calculation(+, -, *, /): ";
-    cin >> sign;
-    
-    cout << "Now insert the second number: ";
-    cin >> s;
-    
-    //Calculation operation signs to perform appropriate calculation from any of the four
-    if(sign == '*')
+    while (sign != '*' || sign != '+' || sign != '-' || sign != '/')
     {
-      cout << "The answer for multiplication is : " << multiplication(r, s)<< endl;  
+       
+        
+        cout << "Please insert the first number : ";
+        cin >> r;
+    
+        cout << "Choose the sign for calculation(+, -, *, /): ";
+        cin >> sign;
+    
+        cout << "Now insert the second number: ";
+        cin >> s;
+        
+        
+        if(sign == '*')
+    {
+      cout << "The answer for multiplication is : " << multiplication(r, s) << "\n"<< endl;  
     }
     else if(sign == '+')
     {
-        cout << "The answer for addition is : " << addition(r, s)<< endl;
+        cout << "The answer for addition is : " << addition(r, s) << "\n"<< endl;
     }
     else if(sign == '-')
     {
-        cout << "The answer for subtraction is : " << subtraction(r, s)<< endl;
+        cout << "The answer for subtraction is : " << subtraction(r, s)<< "\n"<< endl;
     }
     else if(sign == '/')
     {
-        cout << "The answer for division is : " << division(r, s)<< endl;
+        cout << "The answer for division is : " << division(r, s) << "\n"<< endl;
     }
-    else
-    {
-        cout << "Error, insert the correct sign!";
+    
     }
     
     return 0;
-    
 }
