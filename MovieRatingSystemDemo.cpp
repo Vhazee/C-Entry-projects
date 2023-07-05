@@ -15,6 +15,7 @@ void displayMovies()
     cout << "5. Transformers - Rise Of The Beasts" << endl;
 }
 
+//Function to choose a movie from the array of movies
 string chooseMovie(int movieNum)
 {
  string movieSelect[] = {"Spiderman - Far From Home", "Avengers - End game", "Captain America - Civil War",
@@ -24,7 +25,7 @@ string chooseMovie(int movieNum)
     return(movieSelect[movieNum - 1]);
 }
 
-
+//function to select the rating level for a movie
 string rate(int level)
 {
     string rated;
