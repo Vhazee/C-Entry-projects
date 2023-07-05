@@ -15,7 +15,7 @@ void displayMovies()
     cout << "5. Transformers - Rise Of The Beasts" << endl;
 }
 
-//Function to choose a movie from the array of movies
+//Function for choosing a movie from an array of movies
 string chooseMovie(int movieNum)
 {
  string movieSelect[] = {"Spiderman - Far From Home", "Avengers - End game", "Captain America - Civil War",
@@ -25,15 +25,11 @@ string chooseMovie(int movieNum)
     return(movieSelect[movieNum - 1]);
 }
 
-//function to select the rating level for a movie
+//Function for selecting a rate ranging from 1-5 which will give the rating level as poor, average or great
 string rate(int level)
 {
     string rated;
-    while(level <= 0)
-    {
-        cout << "Please enter integer numbers from 1-5: ";
-        cin >> level;
-    }
+
     if (level == 1 && level <=2)
     {
         rated = "Poor";
@@ -63,6 +59,13 @@ int main()
     int rating;
     cout <<endl<< "How do you rate this movie (Choose integers from 1-5): ";
     cin >> rating;
+
+    //Looping for rate if the invalid level is given by the user
+    while(rating <= 0)
+    {
+        cout << "Please enter integer numbers from 1-5: ";
+        cin >> rating;
+    }
     
     cout <<endl<< "Movie choosen is "<<chooseMovie(selectMovie) << " and is rated ";
     cout << rate(rating) << endl;
